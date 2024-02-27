@@ -39,7 +39,7 @@
             // 
             promptLabel.AutoSize = true;
             promptLabel.Font = new Font("Unispace", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            promptLabel.Location = new Point(90, 79);
+            promptLabel.Location = new Point(90, 75);
             promptLabel.Name = "promptLabel";
             promptLabel.Size = new Size(953, 116);
             promptLabel.TabIndex = 0;
