@@ -32,6 +32,8 @@
             difficultyTrackBar = new TrackBar();
             trackLabel = new Label();
             goButton = new Button();
+            totalGuessLabel = new Label();
+            roundsLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)difficultyTrackBar).BeginInit();
             SuspendLayout();
             // 
@@ -76,7 +78,7 @@
             goButton.BackColor = Color.MediumSlateBlue;
             goButton.Font = new Font("Unispace", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             goButton.ForeColor = SystemColors.ControlText;
-            goButton.Location = new Point(710, 559);
+            goButton.Location = new Point(895, 554);
             goButton.Name = "goButton";
             goButton.Size = new Size(225, 69);
             goButton.TabIndex = 3;
@@ -84,12 +86,34 @@
             goButton.UseVisualStyleBackColor = false;
             goButton.Click += GoButton_Click;
             // 
+            // totalGuessLabel
+            // 
+            totalGuessLabel.AutoSize = true;
+            totalGuessLabel.Font = new Font("Unispace", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            totalGuessLabel.Location = new Point(39, 580);
+            totalGuessLabel.Name = "totalGuessLabel";
+            totalGuessLabel.Size = new Size(349, 43);
+            totalGuessLabel.TabIndex = 4;
+            totalGuessLabel.Text = "Total Guesses: ";
+            // 
+            // roundsLabel
+            // 
+            roundsLabel.AutoSize = true;
+            roundsLabel.Font = new Font("Unispace", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            roundsLabel.Location = new Point(447, 580);
+            roundsLabel.Name = "roundsLabel";
+            roundsLabel.Size = new Size(349, 43);
+            roundsLabel.TabIndex = 5;
+            roundsLabel.Text = "Rounds Played: ";
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(20F, 48F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MediumSlateBlue;
             ClientSize = new Size(1192, 736);
+            Controls.Add(roundsLabel);
+            Controls.Add(totalGuessLabel);
             Controls.Add(goButton);
             Controls.Add(trackLabel);
             Controls.Add(difficultyTrackBar);
@@ -107,5 +131,7 @@
         private TrackBar difficultyTrackBar;
         private Label trackLabel;
         private Button goButton;
+        private Label totalGuessLabel;
+        private Label roundsLabel;
     }
 }
