@@ -67,9 +67,9 @@
             trackLabel.Font = new Font("Unispace", 7.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             trackLabel.Location = new Point(39, 294);
             trackLabel.Name = "trackLabel";
-            trackLabel.Size = new Size(497, 234);
+            trackLabel.Size = new Size(517, 234);
             trackLabel.TabIndex = 2;
-            trackLabel.Text = "First tick selects a \r\nnumber between  0 and 1 \r\neach tick increases the \r\nupper limit by 10.\r\nMaximum difficulty is \r\nbetween 0 and 101.";
+            trackLabel.Text = "The first tick selects a \r\nnumber between  0 and 1 \r\neach tick increases the \r\nupper limit by 10.\r\nMaximum difficulty is \r\nbetween 0 and 101.";
             // 
             // goButton
             // 
@@ -82,6 +82,7 @@
             goButton.TabIndex = 3;
             goButton.Text = "Go!";
             goButton.UseVisualStyleBackColor = false;
+            goButton.Click += GoButton_Click;
             // 
             // MainForm
             // 

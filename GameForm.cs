@@ -15,6 +15,8 @@ namespace CSC240_GameProject_jrm
         public GameForm()
         {
             InitializeComponent();
+            Random rnd = new Random();
+            int rndNum = rnd.Next(1, ConstValue.usrdf);
         }
     }
 }
