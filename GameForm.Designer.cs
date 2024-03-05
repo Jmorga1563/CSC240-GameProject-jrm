@@ -37,16 +37,19 @@
             upArrowPictureBox = new PictureBox();
             downArrowPictureBox = new PictureBox();
             numGuessLabel = new Label();
+            checkPictureBox = new PictureBox();
+            replayButton = new Button();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)upArrowPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)downArrowPictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)checkPictureBox).BeginInit();
             SuspendLayout();
             // 
             // gameLabel
             // 
             gameLabel.AutoSize = true;
             gameLabel.Font = new Font("Unispace", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            gameLabel.Location = new Point(298, 235);
+            gameLabel.Location = new Point(302, 74);
             gameLabel.Name = "gameLabel";
             gameLabel.Size = new Size(489, 58);
             gameLabel.TabIndex = 0;
@@ -71,6 +74,7 @@
             guessButton.TabIndex = 2;
             guessButton.Text = "Guess";
             guessButton.UseVisualStyleBackColor = false;
+            guessButton.Click += GuessButton_Click;
             // 
             // upArrowPictureBox
             // 
@@ -104,12 +108,37 @@
             numGuessLabel.TabIndex = 6;
             numGuessLabel.Text = "0 Guesses";
             // 
+            // checkPictureBox
+            // 
+            checkPictureBox.Image = (Image)resources.GetObject("checkPictureBox.Image");
+            checkPictureBox.Location = new Point(30, 57);
+            checkPictureBox.Name = "checkPictureBox";
+            checkPictureBox.Size = new Size(248, 217);
+            checkPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            checkPictureBox.TabIndex = 7;
+            checkPictureBox.TabStop = false;
+            checkPictureBox.Visible = false;
+            // 
+            // replayButton
+            // 
+            replayButton.Enabled = false;
+            replayButton.Font = new Font("Unispace", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            replayButton.Location = new Point(402, 558);
+            replayButton.Name = "replayButton";
+            replayButton.Size = new Size(290, 69);
+            replayButton.TabIndex = 8;
+            replayButton.Text = "Play Again";
+            replayButton.UseVisualStyleBackColor = false;
+            replayButton.Click += ReplayButton_Click;
+            // 
             // GameForm
             // 
             AutoScaleDimensions = new SizeF(20F, 48F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MediumSlateBlue;
             ClientSize = new Size(1114, 716);
+            Controls.Add(replayButton);
+            Controls.Add(checkPictureBox);
             Controls.Add(numGuessLabel);
             Controls.Add(downArrowPictureBox);
             Controls.Add(upArrowPictureBox);
@@ -121,6 +150,7 @@
             ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
             ((System.ComponentModel.ISupportInitialize)upArrowPictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)downArrowPictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)checkPictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -134,5 +164,7 @@
         private PictureBox upArrowPictureBox;
         private PictureBox downArrowPictureBox;
         private Label numGuessLabel;
+        private PictureBox checkPictureBox;
+        private Button replayButton;
     }
 }
